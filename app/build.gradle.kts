@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.composequotesapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.composequotesapp"
@@ -28,7 +28,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -70,17 +70,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Hilt
+    // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
 
-    //Navigation
+    // Navigation
     implementation(libs.hilt.navigation)
 
-    //Retrofit
+    // Retrofit
     implementation(libs.bundles.retrofit)
 
-    //Lifecycle Runtime
+    // Lifecycle Runtime
     implementation(libs.life.cycle.compose)
-
 }

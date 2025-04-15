@@ -1,6 +1,6 @@
 [versions]
 agp = "8.6.1"
-kotlin = "2.0.0"
+kotlin = "2.1.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -8,7 +8,7 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2025.04.00"
-hilt_ver = "2.49"
+hilt_ver = "2.56.1"
 kotlin_kapt_ver = "2.1.20"
 hilt_navigation_ver = "1.2.0"
 retrofit_ver = "2.9.0"
@@ -45,6 +45,7 @@ gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", ve
 life-cycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "life_cycle_ver" }
 
 
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -58,6 +59,7 @@ kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin_kapt_ver
 
 #Compose Compiler
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
 
 
 [bundles]
