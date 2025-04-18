@@ -17,13 +17,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.composequotesapp.presentation.ui.screen.homescreen.HomeScreen
 
 
 @Composable
 fun QuotesItem(
     color:Color= Color.White,
     textColor: Color=Color.Black,
-    modifier: Modifier
+    modifier: Modifier=Modifier
 ) {
 
     Card(
@@ -64,8 +65,16 @@ fun QuotesItem(
 
 }
 
+/* can be create multiple previews*/
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun QuotesItemPreview(title: String) {
-    HeadingTitles("Random Quotes")
+private fun QuotesItemPreview() {
+    QuotesItem()
+}
+
+@Preview(showSystemUi = true, showBackground = true)
+@Composable
+private  fun QuotesItemPreview2() {
+    QuotesItem(Color.Red,Color.Black)
 }

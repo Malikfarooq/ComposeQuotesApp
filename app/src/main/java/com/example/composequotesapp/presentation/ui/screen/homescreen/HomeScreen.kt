@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composequotesapp.presentation.components.ToolbarComponent
+import com.example.composequotesapp.presentation.ui.screen.homescreen.components.HomeBody
 
 @Composable
 fun HomeScreen() {
@@ -25,7 +26,7 @@ fun HomeScreen() {
                 .fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-
+            HomeBody()
          }
     }
 }
