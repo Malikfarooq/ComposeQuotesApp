@@ -2,6 +2,7 @@ package com.example.composequotesapp.presentation.components
 
 import android.icu.text.CaseMap.Title
 import android.widget.Toolbar
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -50,7 +51,15 @@ fun ToolbarComponent(
                      )
                  }
             }
-        }
+        },
+
+       actions = {
+           if(showBackButton){
+               Spacer(modifier = Modifier.size(30.dp))
+           }
+       }
+
+
     )
 
 
