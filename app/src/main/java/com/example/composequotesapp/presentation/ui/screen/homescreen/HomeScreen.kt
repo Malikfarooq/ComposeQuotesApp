@@ -12,7 +12,9 @@ import com.example.composequotesapp.presentation.components.ToolbarComponent
 import com.example.composequotesapp.presentation.ui.screen.homescreen.components.HomeBody
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    onClick:()->Unit
+) {
     Scaffold(
         modifier = Modifier
             .fillMaxSize(),
@@ -26,7 +28,7 @@ fun HomeScreen() {
                 .fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
-            HomeBody()
+            HomeBody(onClick=onClick)
          }
     }
 }
@@ -35,5 +37,7 @@ fun HomeScreen() {
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun HomeScreenPreview() {
-    HomeScreen()
+    HomeScreen{
+
+    }
 }

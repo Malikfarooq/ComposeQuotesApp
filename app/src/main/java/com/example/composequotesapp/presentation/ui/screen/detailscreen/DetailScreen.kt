@@ -17,16 +17,17 @@ import com.example.composequotesapp.presentation.ui.screen.detailscreen.componen
 
 
 @Composable
-fun DetailScreen() {
+fun DetailScreen(
+    onBackPress: () -> Unit
+) {
     Scaffold(
         modifier = Modifier.fillMaxWidth(),
         topBar = {
             ToolbarComponent(
                 showBackButton = true,
                 title = "Detail",
-                onBackPress = {
-
-                })
+                onBackPress = onBackPress
+            )
         }
 
     ) { paddingValues ->
@@ -47,6 +48,8 @@ fun DetailScreen() {
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 private fun DetailScreenPreview(modifier: Modifier = Modifier) {
-    DetailScreen()
+    DetailScreen{
+
+    }
 }
 
