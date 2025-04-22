@@ -8,7 +8,7 @@ class RandomApiUseCase @Inject constructor(
      private  val quotesRepository: QuotesRepository
 ) {
 
-    operator fun invoke = flow<> {
+    operator fun invoke() = flow {
 
         quotesRepository.getRandomQuotes().let {
 
