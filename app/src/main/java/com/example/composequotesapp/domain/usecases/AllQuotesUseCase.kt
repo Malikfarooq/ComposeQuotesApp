@@ -1,6 +1,7 @@
 package com.example.composequotesapp.domain.usecases
 
 import com.example.composequotesapp.domain.repository.QuotesRepository
+import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class AllQuotesUseCase @Inject constructor(
@@ -9,5 +10,16 @@ class AllQuotesUseCase @Inject constructor(
     /**
      * need to understand invoke method
      */
-    suspend operator fun invoke() = quotesRepository.getAllQuotes()
+    operator fun invoke()= flow {
+         quotesRepository.getAllQuotes().let {
+             if (it.isSuccessful) {
+                 val quotes = it.body()?.quotes
+                 if (quotes != null) {
+                     emit(quotes)
+                 } else {
+                     emit(emptyList())
+                 }
+             }
+         }
+    }
 }
