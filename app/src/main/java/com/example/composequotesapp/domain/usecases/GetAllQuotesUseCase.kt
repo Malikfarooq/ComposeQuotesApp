@@ -6,18 +6,14 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-
-/**
- * Use case that contains the business logic to fetch a random quote from the repository.
- * Called from the ViewModel or presentation layer.
- */
+// TODO: need to understand invoke method
 
 //TODO: need to add error handle into API
-class RandomApiUseCase @Inject constructor(
-     private  val quotesRepository: QuotesRepository
+class GetAllQuotesUseCase @Inject constructor(
+    private val repository: QuotesRepository
 ) {
-    operator fun invoke(): Flow<Quotes> = flow {
-        val quotes = quotesRepository.getRandomQuote()
+    operator fun invoke(): Flow<List<Quotes>> = flow {
+        val quotes = repository.getAllQuotes()
         emit(quotes)
     }
 }

@@ -1,6 +1,6 @@
-package com.example.composequotesapp.domain.models
+package com.example.composequotesapp.data.model
 
-data class Quote(
+data class QuoteDto(
     val author: String?=null,
     val id: Int?=null,
     val quote: String?=null
